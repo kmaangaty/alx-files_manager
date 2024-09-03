@@ -15,7 +15,6 @@ class DBClient {
     this.client.connect();
   }
 
-
   isAlive() {
     return this.client.isConnected();
   }
