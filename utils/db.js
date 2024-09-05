@@ -1,9 +1,7 @@
 import mongodb from 'mongodb';
 import envLoader from './env_loader';
 
-
 class DBClient {
-
   constructor() {
     envLoader();
     const host = process.env.DB_HOST || 'localhost';
