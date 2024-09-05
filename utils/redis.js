@@ -1,5 +1,5 @@
-import { promisify } from 'util';
-import { createClient } from 'redis';
+import {promisify} from 'util';
+import {createClient} from 'redis';
 
 class RedisClient {
 
