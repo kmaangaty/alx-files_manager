@@ -1,8 +1,7 @@
-import {promisify} from 'util';
-import {createClient} from 'redis';
+import { promisify } from 'util';
+import { createClient } from 'redis';
 
 class RedisClient {
-
   constructor() {
     this.client = createClient();
     this.isClientConnected = true;
@@ -24,8 +23,7 @@ class RedisClient {
   }
 
   async set(key, value, duration) {
-    await promisify(this.client.SETEX)
-      .bind(this.client)(key, duration, value);
+    await promisify(this.client.SETEX).bind(this.client)(key, duration, value);
   }
 
   async del(key) {
